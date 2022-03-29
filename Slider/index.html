@@ -1,0 +1,46 @@
+<style>
+    .Container{
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 200px;
+    }
+    .Sliders{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button class="Left_Arrow" id="Left_Arrow">
+            <
+        </button>
+        <div class="Slide">
+            <div class="Sliders active">
+                Slide 1
+            </div>
+            <div class="Sliders">
+                Slide 2
+            </div>
+            <div class="Sliders">
+                Slide 3
+            </div>
+        </div>
+        <button class="Right_Arrow" id="Right_Arrow">
+            >
+        </button>
+    </div>
+    <script src="./slider.js"></script>
+</body>
+</html>
