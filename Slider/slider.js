@@ -2,32 +2,25 @@
 //On click  move to right or left
 Slides = document.getElementsByClassName("Sliders")
 SlideNumber = 0
-SlideNumberPrev = 1
 SlidesLength = (Slides.length)-1
 
 Left_Arrow = document.getElementById("Left_Arrow")
 Right_Arrow = document.getElementById("Right_Arrow")
-
 Left_Arrow.addEventListener('click', function(){
     SlideNumber-=1
-    if(SlideNumber < 0){
+    if(SlideNumber<0){
         SlideNumber = SlidesLength
+    }else if(SlideNumber>SlidesLength){
+        SlideNumber = 0
     }
-    SlideNumberPrev = SlideNumberPrev-=1
-    if(SlideNumberPrev>SlidesLength){
-        SlideNumberPrev = 0
+    console.log("real"+SlideNumber)
+    l = SlideNumber+1
+    if(l>SlidesLength){
+        l = 0
     }
-    else if(SlideNumberPrev<0){
-        SlideNumberPrev = SlidesLength
-    }
-
-    PreviousSlide = Slides[SlideNumberPrev]
-    CurrentSlide = Slides[SlideNumber]
-    PreviousSlide.classList.remove("active");
-    CurrentSlide.classList.add("active");
-    console.log("prev"+SlideNumberPrev)
-    console.log("current"+SlideNumber)
-
+    console.log("past"+l)
+    Slides[SlideNumber].classList.add("active")
+    Slides[l].classList.remove("active")
 })
 
 
@@ -37,19 +30,15 @@ Right_Arrow.addEventListener('click', function Right_Arrow(){
     if(SlideNumber > SlidesLength){
         SlideNumber = 0
     }
-    SlideNumberPrev = SlideNumberPrev+=1
-    if(SlideNumberPrev>SlidesLength){
-        SlideNumberPrev = 0
+    l = SlideNumber-1
+    if(l>SlidesLength){
+        l = 0
+    }else if(l<0){
+        l=SlidesLength
     }
-    else if(SlideNumberPrev>2){
-        SlideNumberPrev = SlidesLength
-    }
-    PreviousSlide = Slides[SlideNumberPrev]
-    CurrentSlide = Slides[SlideNumber]
-    PreviousSlide.classList.remove("active");
-    CurrentSlide.classList.add("active");
-    console.log("prev"+SlideNumberPrev)
-    console.log("current"+SlideNumber)
+    console.log("real"+SlideNumber)
+    console.log("past"+l)
+    Slides[SlideNumber].classList.add("active")
+    Slides[l].classList.remove("active")
   })
-
   
