@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag And Drop</title>
+</head>
+<body>
+    <div class="Container" style="display: flex; width: 100%; margin: auto; border: 1px red solid; justify-content: space-between; height: 100vh;">
+        <div class="Drop" id="Drop" style="width: 300px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="false">
+            <div class="Wrapper" style="display: flex; flex-direction: column">
+                <h1 class="Open">Open</h1>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 1
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 2
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 3
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 4
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 5
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 6
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 7
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 8
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 9
+                </span>
+                <span class="Data" id="Data" style="width: 100px; padding: 20px; border: 1px blue solid; text-align: center;" draggable="true">
+                    Data 10
+                </span>
+                </span>
+            </div>
+        </div>
+        <div class="Drop" id="Drop" style="width: 30vw; padding: 20px; border: 1px blue solid; text-align: center;" draggable="false">
+            <h1 class="InProgress">In-Progress</h1>
+        </div>
+        <div class="Drop" id="Drop" style="width: 30vw; padding: 20px; border: 1px blue solid; text-align: center;" draggable="false">
+            <h1 class="Closed">Closed</h1>
+        </div>
+        <div class="Drop" id="Drop" style="width: 30vw; padding: 20px; border: 1px blue solid; text-align: center;" draggable="false">
+            <h1 class="ReOpen">Re-Open</h1>
+        </div>
+    </div>
+    <script src="./Script/NewDrag.js"></script>
+</body>
+</html>
